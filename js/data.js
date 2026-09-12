@@ -1,6 +1,6 @@
 const PROJECT_BRIEFS = [
   {
-    "ticketId": "BB-7512",
+    "ticketId": "DX-7512",
     "title": "Loop",
     "difficulty": "Beginner",
     "platform": "Mobile app (iOS/Android)",
@@ -34,7 +34,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-9308",
+    "ticketId": "DX-9308",
     "title": "Kinfolk",
     "difficulty": "Intermediate",
     "platform": "Web app",
@@ -68,7 +68,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-6874",
+    "ticketId": "DX-6874",
     "title": "Ballot Clear",
     "difficulty": "Advanced",
     "platform": "Responsive website",
@@ -103,7 +103,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-7768",
+    "ticketId": "DX-7768",
     "title": "Tab",
     "difficulty": "Beginner",
     "platform": "Desktop app",
@@ -137,7 +137,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-7892",
+    "ticketId": "DX-7892",
     "title": "Unsub",
     "difficulty": "Intermediate",
     "platform": "Browser extension",
@@ -171,7 +171,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-5192",
+    "ticketId": "DX-5192",
     "title": "Pulse Log",
     "difficulty": "Advanced",
     "platform": "Smartwatch app",
@@ -206,7 +206,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-4307",
+    "ticketId": "DX-4307",
     "title": "Wander",
     "difficulty": "Beginner",
     "platform": "Tablet app",
@@ -240,7 +240,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-6744",
+    "ticketId": "DX-6744",
     "title": "TakeIt",
     "difficulty": "Intermediate",
     "platform": "Voice or conversational interface",
@@ -274,7 +274,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-6030",
+    "ticketId": "DX-6030",
     "title": "Shift",
     "difficulty": "Advanced",
     "platform": "Mobile app (iOS/Android)",
@@ -309,7 +309,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-3231",
+    "ticketId": "DX-3231",
     "title": "Chapter",
     "difficulty": "Beginner",
     "platform": "Web app",
@@ -343,7 +343,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-4110",
+    "ticketId": "DX-4110",
     "title": "Market Day",
     "difficulty": "Intermediate",
     "platform": "Responsive website",
@@ -377,7 +377,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-5936",
+    "ticketId": "DX-5936",
     "title": "Ledger Lite",
     "difficulty": "Advanced",
     "platform": "Desktop app",
@@ -412,7 +412,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-2663",
+    "ticketId": "DX-2663",
     "title": "Offline Hours",
     "difficulty": "Beginner",
     "platform": "Browser extension",
@@ -446,7 +446,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-3449",
+    "ticketId": "DX-3449",
     "title": "Steady",
     "difficulty": "Intermediate",
     "platform": "Smartwatch app",
@@ -480,7 +480,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-6889",
+    "ticketId": "DX-6889",
     "title": "LearnPath",
     "difficulty": "Advanced",
     "platform": "Tablet app",
@@ -515,7 +515,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-2477",
+    "ticketId": "DX-2477",
     "title": "Sous",
     "difficulty": "Beginner",
     "platform": "Voice or conversational interface",
@@ -549,7 +549,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-1013",
+    "ticketId": "DX-1013",
     "title": "Spoke",
     "difficulty": "Intermediate",
     "platform": "Mobile app (iOS/Android)",
@@ -583,7 +583,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-7982",
+    "ticketId": "DX-7982",
     "title": "Response Board",
     "difficulty": "Advanced",
     "platform": "Web app",
@@ -618,7 +618,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-1082",
+    "ticketId": "DX-1082",
     "title": "Handmade Row",
     "difficulty": "Beginner",
     "platform": "Responsive website",
@@ -652,7 +652,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-5437",
+    "ticketId": "DX-5437",
     "title": "Hourglass",
     "difficulty": "Intermediate",
     "platform": "Desktop app",
@@ -686,7 +686,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-8561",
+    "ticketId": "DX-8561",
     "title": "ContrastCheck",
     "difficulty": "Advanced",
     "platform": "Browser extension",
@@ -721,7 +721,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-3412",
+    "ticketId": "DX-3412",
     "title": "Sip",
     "difficulty": "Beginner",
     "platform": "Smartwatch app",
@@ -755,7 +755,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-9758",
+    "ticketId": "DX-9758",
     "title": "Bistro Tab",
     "difficulty": "Intermediate",
     "platform": "Tablet app",
@@ -789,7 +789,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-5489",
+    "ticketId": "DX-5489",
     "title": "MedSpeak",
     "difficulty": "Advanced",
     "platform": "Voice or conversational interface",
@@ -824,7 +824,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-5259",
+    "ticketId": "DX-5259",
     "title": "Fosterly",
     "difficulty": "Beginner",
     "platform": "Mobile app (iOS/Android)",
@@ -858,7 +858,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-8020",
+    "ticketId": "DX-8020",
     "title": "Plot",
     "difficulty": "Intermediate",
     "platform": "Web app",
@@ -892,7 +892,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-5272",
+    "ticketId": "DX-5272",
     "title": "ClaimClear",
     "difficulty": "Advanced",
     "platform": "Responsive website",
@@ -927,7 +927,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-8837",
+    "ticketId": "DX-8837",
     "title": "Coinly",
     "difficulty": "Beginner",
     "platform": "Desktop app",
@@ -961,7 +961,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-5246",
+    "ticketId": "DX-5246",
     "title": "Applywise",
     "difficulty": "Intermediate",
     "platform": "Browser extension",
@@ -995,7 +995,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-2616",
+    "ticketId": "DX-2616",
     "title": "Vital Watch",
     "difficulty": "Advanced",
     "platform": "Smartwatch app",
@@ -1030,7 +1030,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-7831",
+    "ticketId": "DX-7831",
     "title": "Storynook",
     "difficulty": "Beginner",
     "platform": "Tablet app",
@@ -1064,7 +1064,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-4188",
+    "ticketId": "DX-4188",
     "title": "Pantry Voice",
     "difficulty": "Intermediate",
     "platform": "Voice or conversational interface",
@@ -1098,7 +1098,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-2481",
+    "ticketId": "DX-2481",
     "title": "Carpool Rural",
     "difficulty": "Advanced",
     "platform": "Mobile app (iOS/Android)",
@@ -1133,7 +1133,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-7257",
+    "ticketId": "DX-7257",
     "title": "Aisle",
     "difficulty": "Beginner",
     "platform": "Web app",
@@ -1167,7 +1167,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-4989",
+    "ticketId": "DX-4989",
     "title": "Stacks",
     "difficulty": "Intermediate",
     "platform": "Responsive website",
@@ -1201,7 +1201,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-1938",
+    "ticketId": "DX-1938",
     "title": "PalletTrack",
     "difficulty": "Advanced",
     "platform": "Desktop app",
@@ -1236,7 +1236,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-5814",
+    "ticketId": "DX-5814",
     "title": "Bookmarked",
     "difficulty": "Beginner",
     "platform": "Browser extension",
@@ -1270,7 +1270,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-4408",
+    "ticketId": "DX-4408",
     "title": "Exhale",
     "difficulty": "Intermediate",
     "platform": "Smartwatch app",
@@ -1304,7 +1304,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-3056",
+    "ticketId": "DX-3056",
     "title": "CheckPoint",
     "difficulty": "Advanced",
     "platform": "Tablet app",
@@ -1339,7 +1339,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-7330",
+    "ticketId": "DX-7330",
     "title": "Nightlight",
     "difficulty": "Beginner",
     "platform": "Voice or conversational interface",
@@ -1373,7 +1373,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-8353",
+    "ticketId": "DX-8353",
     "title": "Tandem Local",
     "difficulty": "Intermediate",
     "platform": "Mobile app (iOS/Android)",
@@ -1407,7 +1407,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-7240",
+    "ticketId": "DX-7240",
     "title": "Grantwell",
     "difficulty": "Advanced",
     "platform": "Web app",
@@ -1442,7 +1442,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-5820",
+    "ticketId": "DX-5820",
     "title": "Pawstep",
     "difficulty": "Beginner",
     "platform": "Responsive website",
@@ -1476,7 +1476,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-8823",
+    "ticketId": "DX-8823",
     "title": "Frameset",
     "difficulty": "Intermediate",
     "platform": "Desktop app",
@@ -1510,7 +1510,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-2841",
+    "ticketId": "DX-2841",
     "title": "Was It Ever",
     "difficulty": "Advanced",
     "platform": "Browser extension",
@@ -1545,7 +1545,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-7451",
+    "ticketId": "DX-7451",
     "title": "Upright",
     "difficulty": "Beginner",
     "platform": "Smartwatch app",
@@ -1579,7 +1579,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-7523",
+    "ticketId": "DX-7523",
     "title": "Chairside",
     "difficulty": "Intermediate",
     "platform": "Tablet app",
@@ -1613,7 +1613,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-5225",
+    "ticketId": "DX-5225",
     "title": "FieldLog",
     "difficulty": "Advanced",
     "platform": "Voice or conversational interface",
@@ -1648,7 +1648,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-9059",
+    "ticketId": "DX-9059",
     "title": "Sprout",
     "difficulty": "Beginner",
     "platform": "Mobile app (iOS/Android)",
@@ -1682,7 +1682,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-9923",
+    "ticketId": "DX-9923",
     "title": "TwoHomes",
     "difficulty": "Intermediate",
     "platform": "Web app",
@@ -1716,7 +1716,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-1006",
+    "ticketId": "DX-1006",
     "title": "TransitAccess",
     "difficulty": "Advanced",
     "platform": "Responsive website",
@@ -1751,7 +1751,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-3034",
+    "ticketId": "DX-3034",
     "title": "Recipe Box",
     "difficulty": "Beginner",
     "platform": "Desktop app",
@@ -1785,7 +1785,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-9818",
+    "ticketId": "DX-9818",
     "title": "Threadline",
     "difficulty": "Intermediate",
     "platform": "Browser extension",
@@ -1819,7 +1819,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-8612",
+    "ticketId": "DX-8612",
     "title": "Pacer Pro",
     "difficulty": "Advanced",
     "platform": "Smartwatch app",
@@ -1854,7 +1854,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-6331",
+    "ticketId": "DX-6331",
     "title": "Doodleway",
     "difficulty": "Beginner",
     "platform": "Tablet app",
@@ -1888,7 +1888,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-2234",
+    "ticketId": "DX-2234",
     "title": "Ring Round",
     "difficulty": "Intermediate",
     "platform": "Voice or conversational interface",
@@ -1922,7 +1922,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-9773",
+    "ticketId": "DX-9773",
     "title": "Lendit",
     "difficulty": "Advanced",
     "platform": "Mobile app (iOS/Android)",
@@ -1957,7 +1957,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-1215",
+    "ticketId": "DX-1215",
     "title": "Nearby Nights",
     "difficulty": "Beginner",
     "platform": "Web app",
@@ -1991,7 +1991,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-1299",
+    "ticketId": "DX-1299",
     "title": "Fundmatch",
     "difficulty": "Intermediate",
     "platform": "Responsive website",
@@ -2025,7 +2025,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-1888",
+    "ticketId": "DX-1888",
     "title": "Reeler",
     "difficulty": "Advanced",
     "platform": "Desktop app",
@@ -2060,7 +2060,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-5621",
+    "ticketId": "DX-5621",
     "title": "Quietly",
     "difficulty": "Beginner",
     "platform": "Browser extension",
@@ -2094,7 +2094,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-7271",
+    "ticketId": "DX-7271",
     "title": "GlucoTrack",
     "difficulty": "Intermediate",
     "platform": "Smartwatch app",
@@ -2128,7 +2128,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-4514",
+    "ticketId": "DX-4514",
     "title": "Sitewalk",
     "difficulty": "Advanced",
     "platform": "Tablet app",
@@ -2163,7 +2163,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-7910",
+    "ticketId": "DX-7910",
     "title": "Driftwood",
     "difficulty": "Beginner",
     "platform": "Voice or conversational interface",
@@ -2197,7 +2197,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-4722",
+    "ticketId": "DX-4722",
     "title": "Nextblock",
     "difficulty": "Intermediate",
     "platform": "Mobile app (iOS/Android)",
@@ -2231,7 +2231,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-2397",
+    "ticketId": "DX-2397",
     "title": "Hauler",
     "difficulty": "Advanced",
     "platform": "Web app",
@@ -2266,7 +2266,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-4907",
+    "ticketId": "DX-4907",
     "title": "Swap Plate",
     "difficulty": "Beginner",
     "platform": "Responsive website",
@@ -2300,7 +2300,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-5807",
+    "ticketId": "DX-5807",
     "title": "Setlist",
     "difficulty": "Intermediate",
     "platform": "Desktop app",
@@ -2334,7 +2334,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-3857",
+    "ticketId": "DX-3857",
     "title": "Who's Watching",
     "difficulty": "Advanced",
     "platform": "Browser extension",
@@ -2369,7 +2369,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-7288",
+    "ticketId": "DX-7288",
     "title": "AquaCue",
     "difficulty": "Beginner",
     "platform": "Smartwatch app",
@@ -2403,7 +2403,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-4023",
+    "ticketId": "DX-4023",
     "title": "CivicKiosk",
     "difficulty": "Intermediate",
     "platform": "Tablet app",
@@ -2437,7 +2437,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-2940",
+    "ticketId": "DX-2940",
     "title": "HarvestLine",
     "difficulty": "Advanced",
     "platform": "Voice or conversational interface",
@@ -2472,7 +2472,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-3969",
+    "ticketId": "DX-3969",
     "title": "Studyspot",
     "difficulty": "Beginner",
     "platform": "Mobile app (iOS/Android)",
@@ -2506,7 +2506,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-1247",
+    "ticketId": "DX-1247",
     "title": "Wattwise",
     "difficulty": "Intermediate",
     "platform": "Web app",
@@ -2540,7 +2540,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-7701",
+    "ticketId": "DX-7701",
     "title": "Legal Bridge",
     "difficulty": "Advanced",
     "platform": "Responsive website",
@@ -2575,7 +2575,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-6592",
+    "ticketId": "DX-6592",
     "title": "Folio",
     "difficulty": "Beginner",
     "platform": "Desktop app",
@@ -2609,7 +2609,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-2653",
+    "ticketId": "DX-2653",
     "title": "Savvy",
     "difficulty": "Intermediate",
     "platform": "Browser extension",
@@ -2643,7 +2643,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-9500",
+    "ticketId": "DX-9500",
     "title": "Nightwatch",
     "difficulty": "Advanced",
     "platform": "Smartwatch app",
@@ -2678,7 +2678,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-2680",
+    "ticketId": "DX-2680",
     "title": "Curious",
     "difficulty": "Beginner",
     "platform": "Tablet app",
@@ -2712,7 +2712,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-9199",
+    "ticketId": "DX-9199",
     "title": "SubChef",
     "difficulty": "Intermediate",
     "platform": "Voice or conversational interface",
@@ -2746,7 +2746,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-7764",
+    "ticketId": "DX-7764",
     "title": "Compass Home",
     "difficulty": "Advanced",
     "platform": "Mobile app (iOS/Android)",
@@ -2781,7 +2781,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-9366",
+    "ticketId": "DX-9366",
     "title": "Spine",
     "difficulty": "Beginner",
     "platform": "Web app",
@@ -2815,7 +2815,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-6939",
+    "ticketId": "DX-6939",
     "title": "ShiftGiver",
     "difficulty": "Intermediate",
     "platform": "Responsive website",
@@ -2849,7 +2849,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-1698",
+    "ticketId": "DX-1698",
     "title": "Blueprint Books",
     "difficulty": "Advanced",
     "platform": "Desktop app",
@@ -2884,7 +2884,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-1416",
+    "ticketId": "DX-1416",
     "title": "Just The Recipe",
     "difficulty": "Beginner",
     "platform": "Browser extension",
@@ -2918,7 +2918,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-5378",
+    "ticketId": "DX-5378",
     "title": "CareCue",
     "difficulty": "Intermediate",
     "platform": "Smartwatch app",
@@ -2952,7 +2952,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-4068",
+    "ticketId": "DX-4068",
     "title": "Bedside",
     "difficulty": "Advanced",
     "platform": "Tablet app",
@@ -2987,7 +2987,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-2303",
+    "ticketId": "DX-2303",
     "title": "AisleFind",
     "difficulty": "Beginner",
     "platform": "Voice or conversational interface",
@@ -3021,7 +3021,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-2953",
+    "ticketId": "DX-2953",
     "title": "FixMyStreet Mini",
     "difficulty": "Intermediate",
     "platform": "Mobile app (iOS/Android)",
@@ -3055,7 +3055,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-5670",
+    "ticketId": "DX-5670",
     "title": "Slotwise",
     "difficulty": "Advanced",
     "platform": "Web app",
@@ -3090,7 +3090,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-7026",
+    "ticketId": "DX-7026",
     "title": "Trailhead",
     "difficulty": "Beginner",
     "platform": "Responsive website",
@@ -3124,7 +3124,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-7615",
+    "ticketId": "DX-7615",
     "title": "Greenroom",
     "difficulty": "Intermediate",
     "platform": "Desktop app",
@@ -3158,7 +3158,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-6836",
+    "ticketId": "DX-6836",
     "title": "Sourcecheck",
     "difficulty": "Advanced",
     "platform": "Browser extension",
@@ -3193,7 +3193,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-2305",
+    "ticketId": "DX-2305",
     "title": "Standby",
     "difficulty": "Beginner",
     "platform": "Smartwatch app",
@@ -3227,7 +3227,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-6530",
+    "ticketId": "DX-6530",
     "title": "Firebell",
     "difficulty": "Intermediate",
     "platform": "Tablet app",
@@ -3261,7 +3261,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-8445",
+    "ticketId": "DX-8445",
     "title": "RideAloud",
     "difficulty": "Advanced",
     "platform": "Voice or conversational interface",
@@ -3296,7 +3296,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-8076",
+    "ticketId": "DX-8076",
     "title": "Handoff",
     "difficulty": "Beginner",
     "platform": "Mobile app (iOS/Android)",
@@ -3330,7 +3330,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "4-8 hours"
   },
   {
-    "ticketId": "BB-9556",
+    "ticketId": "DX-9556",
     "title": "Scopewise",
     "difficulty": "Intermediate",
     "platform": "Web app",
@@ -3364,7 +3364,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "10-16 hours"
   },
   {
-    "ticketId": "BB-3041",
+    "ticketId": "DX-3041",
     "title": "ReadyHome",
     "difficulty": "Advanced",
     "platform": "Responsive website",
@@ -3399,7 +3399,7 @@ const PROJECT_BRIEFS = [
     "estimatedTime": "20-30 hours"
   },
   {
-    "ticketId": "BB-4992",
+    "ticketId": "DX-4992",
     "title": "Rootline",
     "difficulty": "Beginner",
     "platform": "Desktop app",

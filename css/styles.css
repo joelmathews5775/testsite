@@ -49,11 +49,6 @@
      see the 480px query. */
   --btn-height: 2.75rem;
   --btn-font-size: 0.95rem;
-
-  /* Shared width for the two "Log in" buttons (header + the
-     saved-briefs prompt in main) so they match even though one
-     uses the compact small-button padding and the other doesn't. */
-  --login-btn-width: 6.5rem;
 }
 
 :root[data-theme='dark'] {
@@ -158,20 +153,36 @@ select, input {
 }
 
 .skip-link {
+  /* Positioned relative to the header's own centered .wrap container
+     (not the viewport) so it lines up with the title's actual
+     coordinate system, including on wide screens where .wrap
+     centers itself with empty margin on either side — a
+     viewport-relative `fixed` position can't account for that
+     margin and drifts away from the title as the window widens.
+     Height/font match every other button via the shared tokens;
+     left/top reuse the header's own padding values so it overlaps
+     the title rather than approximating it with separate magic
+     numbers. z-index is set well above every other stacking value
+     on the site so it's unambiguously the topmost element whenever
+     it's visible. */
   position: absolute;
   top: -100%;
-  left: var(--space-4);
+  left: var(--space-5);
   background: var(--accent);
   color: var(--accent-ink);
-  padding: var(--space-3) var(--space-4);
+  padding: 0 var(--space-4);
+  min-height: var(--btn-height);
+  display: inline-flex;
+  align-items: center;
   border-radius: var(--radius-sm);
-  z-index: 100;
+  z-index: 9999;
   font-weight: 600;
+  font-size: var(--btn-font-size);
   text-decoration: none;
 }
 
 .skip-link:focus {
-  top: var(--space-4);
+  top: var(--space-3);
 }
 
 :focus-visible {
@@ -200,6 +211,7 @@ select, input {
 }
 
 .site-header .wrap {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -343,18 +355,6 @@ select, input {
 
 .btn[disabled]:hover { box-shadow: none; }
 
-#account-btn,
-#saved-signin-btn {
-  min-width: var(--login-btn-width);
-}
-
-#account-btn {
-  max-width: 14rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 /* =========================================================
    Hero
    ========================================================= */
@@ -415,17 +415,27 @@ select, input {
   box-shadow: var(--shadow-card);
 }
 
+#generator-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.hero__panel-intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
 .hero__panel h2 {
-  font-size: 1rem;
-  font-family: var(--font-sans);
+  font-size: 1.6rem;
+  font-family: var(--font-display);
   font-weight: 700;
-  margin-bottom: var(--space-1);
 }
 
 .hero__panel .hint {
-  color: var(--ink-faint);
-  font-size: 0.9rem;
-  margin-bottom: var(--space-4);
+  color: var(--ink-soft);
+  font-size: 1rem;
   display: block;
 }
 
@@ -433,7 +443,6 @@ select, input {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-3);
-  margin-bottom: var(--space-4);
 }
 
 @media (min-width: 901px) {
@@ -458,7 +467,7 @@ select, input {
 }
 
 .field label {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--ink-soft);
 }
@@ -483,6 +492,16 @@ select, input {
 
 [data-theme='dark'] .field select {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B7CBE2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+/* Best-effort: ask the dropdown's option list to match the select's
+   own width rather than auto-sizing to its longest option's text.
+   Browsers vary in how much of this they honor for the native
+   popup — see the note in the chat reply about what CSS can and
+   can't guarantee here. */
+.field select option {
+  width: 100%;
+  max-width: 100%;
 }
 
 .hero__panel .btn--primary {
@@ -731,19 +750,6 @@ select, input {
   flex-wrap: wrap;
 }
 
-.signed-out-panel {
-  border: 1.5px dashed var(--line-strong);
-  border-radius: var(--radius-md);
-  padding: var(--space-6) var(--space-5);
-  text-align: center;
-  background: var(--surface);
-}
-
-.signed-out-panel p {
-  color: var(--ink-soft);
-  margin-bottom: var(--space-4);
-}
-
 /* =========================================================
    How it works
    ========================================================= */
@@ -802,152 +808,6 @@ select, input {
   flex-wrap: wrap;
 }
 
-/* =========================================================
-   Modal (sign in)
-   ========================================================= */
-
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(10, 16, 26, 0.55);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-4);
-  z-index: 200;
-}
-
-.modal-overlay[hidden] { display: none; }
-
-.modal {
-  width: 100%;
-  max-width: 26rem;
-  background: var(--surface-raised);
-  border: 1.5px solid var(--line-strong);
-  border-radius: var(--radius-md);
-  padding: var(--space-6);
-  box-shadow: 0 20px 50px -20px rgba(0,0,0,0.5);
-  position: relative;
-}
-
-.modal h2 {
-  font-size: 1.4rem;
-  margin-bottom: var(--space-2);
-}
-
-.modal .modal-sub {
-  color: var(--ink-soft);
-  margin-bottom: var(--space-5);
-  display: block;
-}
-
-.modal .field { margin-bottom: var(--space-4); }
-
-.modal input[type="text"],
-.modal input[type="email"],
-.modal input[type="password"] {
-  min-height: var(--btn-height);
-  padding: 0.5rem 0.7rem;
-  border-radius: var(--radius-md);
-  border: 1.5px solid var(--line-strong);
-  background: var(--surface);
-  color: var(--ink);
-  width: 100%;
-  font-family: inherit;
-  font-size: 1rem;
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-.modal input[type="password"]::-ms-reveal,
-.modal input[type="password"]::-ms-clear {
-  display: none;
-}
-
-.password-field {
-  position: relative;
-}
-
-.password-field input {
-  padding-right: var(--btn-height);
-}
-
-.password-toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: var(--btn-height);
-  height: var(--btn-height);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  background: none;
-  border: none;
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  color: var(--ink-faint);
-}
-
-.password-toggle:hover {
-  color: var(--ink);
-}
-
-.password-toggle svg {
-  width: 1.15rem;
-  height: 1.15rem;
-}
-
-.password-toggle[aria-pressed="true"] {
-  color: var(--focus-ring);
-}
-
-.modal-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: var(--space-3);
-  margin-top: var(--space-5);
-}
-
-.modal-close {
-  position: absolute;
-  top: var(--space-3);
-  right: var(--space-3);
-}
-
-.field-error {
-  color: var(--accent-text);
-  font-size: 0.85rem;
-  min-height: 1.2em;
-  display: block;
-}
-
-.field-error:empty {
-  min-height: 0;
-  margin: 0;
-}
-
-.field-error:not(:empty) {
-  margin-bottom: var(--space-3);
-}
-
-.modal-alt-action {
-  display: block;
-  width: 100%;
-  text-align: center;
-  background: none;
-  border: none;
-  color: var(--ink-soft);
-  font-size: 0.9rem;
-  padding: var(--space-2) 0;
-  margin-top: var(--space-2);
-}
-
-.modal-alt-action__emph {
-  color: var(--focus-ring);
-  font-weight: 700;
-  text-decoration: underline;
-}
-
 /* Toast */
 
 .toast {
@@ -975,6 +835,20 @@ select, input {
     grid-template-columns: 1fr;
   }
 
+  /* Once the hero stacks to a single column, the heading/subheading
+     no longer share the row with the panel — the old character-count
+     caps (meant to control line length in the narrower desktop
+     column) just leave them looking like a narrow floating block on
+     the left instead of spanning the full width like everything
+     else in the stack. */
+  .hero h1 {
+    max-width: 100%;
+  }
+
+  .hero__sub {
+    max-width: 100%;
+  }
+
   .ticket__grid {
     grid-template-columns: 1fr;
   }
@@ -990,6 +864,7 @@ select, input {
 
 @media (max-width: 640px) {
   .wrap { padding-inline: var(--space-4); }
+  .skip-link:focus { left: var(--space-4); }
   .field-row { grid-template-columns: 1fr; }
   .hero { padding-block: var(--space-6) var(--space-5); }
   .ticket__title { font-size: 1.5rem; }
@@ -1010,7 +885,6 @@ select, input {
   :root {
     --btn-height: 2.5rem;
     --btn-font-size: 0.85rem;
-    --login-btn-width: 5.5rem;
   }
 
   /* The toggle's own internal sizing has to shrink in step with
@@ -1041,14 +915,10 @@ select, input {
 
 @media (max-width: 400px) {
   .wrap { padding-inline: var(--space-3); }
+  .skip-link:focus { left: var(--space-3); }
   .site-header .wrap { gap: var(--space-1); }
   .header-actions {
     gap: var(--space-2);
-    flex-shrink: 0;
-  }
-  #account-btn {
-    padding: 0.5rem 0.6rem;
-    max-width: 34vw;
     flex-shrink: 0;
   }
   .hero__panel { padding: var(--space-4); }
@@ -1057,8 +927,6 @@ select, input {
   .ticket__stub { padding: var(--space-3) var(--space-4); }
   .ticket__id { overflow-wrap: anywhere; }
   .how-list { gap: var(--space-4); }
-  .modal { padding: var(--space-4); max-width: calc(100vw - 2rem); }
-  .modal-close { top: var(--space-2); right: var(--space-2); }
 }
 
 @media (prefers-contrast: more) {

@@ -9,10 +9,10 @@
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to main content</a>
-
 <header class="site-header">
   <div class="wrap">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <a class="brand" href="#top">
       <span class="brand__name">DRAFTED <span class="brand__accent">UX</span></span>
     </a>
@@ -42,9 +42,14 @@
         </svg>
       </button>
 
-      <button type="button" id="account-btn" class="btn btn--ghost btn--small">
-        Log in
-      </button>
+      <a id="support-btn"
+         class="btn btn--ghost btn--small"
+         href="https://www.buymeacoffee.com/YOUR_HANDLE"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Support this project (opens in a new tab)">
+        Support
+      </a>
     </div>
   </div>
 </header>
@@ -65,8 +70,10 @@
 
       <div class="hero__panel">
         <form id="generator-form">
-          <h2>Pull a brief</h2>
-          <span class="hint">Choose what you want to practice, or leave both on "Any" for a surprise.</span>
+          <div class="hero__panel-intro">
+            <h2>Pull a brief</h2>
+            <span class="hint">Choose what you want to practice, or leave both on "Any" for a surprise.</span>
+          </div>
 
           <div class="field-row">
             <div class="field">
@@ -121,8 +128,11 @@
       <div class="section-head">
         <div>
           <h2 id="saved-heading">Your saved briefs</h2>
-          <p>Keep a running list of what you've picked to build.</p>
+          <p>Saved for this browser session only — download them if you want to keep them for good.</p>
         </div>
+        <button type="button" class="btn btn--ghost btn--small" id="download-saved-btn" hidden>
+          Download saved briefs
+        </button>
       </div>
       <div id="saved-region"></div>
     </div>
@@ -141,8 +151,8 @@
           <p>Overview, the problem to solve, target users, key screens, constraints, and deliverables — everything a real client hand-off would include.</p>
         </li>
         <li>
-          <h3>Design it, save it, ship it</h3>
-          <p>Log in to keep a brief on your list, then design the flow and add the result to your portfolio.</p>
+          <h3>Save it, then ship it</h3>
+          <p>Save a brief to keep it on your list for this session, design the flow, and download your saved briefs any time to keep them for good.</p>
         </li>
       </ol>
     </div>
@@ -157,92 +167,10 @@
   </div>
 </footer>
 
-<!-- Log in / sign up modal -->
-<div class="modal-overlay" id="signin-overlay" hidden>
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="signin-title" id="signin-modal">
-    <button type="button" class="btn btn--ghost btn--small modal-close" id="signin-close" aria-label="Close dialog">
-      Close
-    </button>
-    <div class="modal-inner">
-      <h2 id="signin-title">Log in to DRAFTED UX</h2>
-      <span class="modal-sub" id="signin-subtitle">Log in to keep a running list of the briefs you plan to design.</span>
-
-      <form id="login-form" novalidate>
-        <div class="field">
-          <label for="login-email">Email</label>
-          <input type="email" id="login-email" name="email" autocomplete="email" required>
-        </div>
-        <div class="field">
-          <label for="login-password">Password</label>
-          <div class="password-field">
-            <input type="password" id="login-password" name="password" autocomplete="current-password" required>
-            <button type="button" class="password-toggle" data-target="login-password" aria-label="Show password" aria-pressed="false">
-              <svg class="password-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path>
-                <circle cx="12" cy="12" r="3"></circle>
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <span class="field-error" id="signin-error" role="alert"></span>
-
-        <div class="modal-actions">
-          <button type="button" class="btn btn--ghost" id="signin-cancel">Cancel</button>
-          <button type="submit" class="btn btn--primary">Log in</button>
-        </div>
-      </form>
-
-      <form id="signup-form" novalidate hidden>
-        <div class="field">
-          <label for="signup-email">Email</label>
-          <input type="email" id="signup-email" name="email" autocomplete="email" required>
-        </div>
-        <div class="field">
-          <label for="signup-password">Password</label>
-          <div class="password-field">
-            <input type="password" id="signup-password" name="password" autocomplete="new-password" required>
-            <button type="button" class="password-toggle" data-target="signup-password" aria-label="Show password" aria-pressed="false">
-              <svg class="password-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path>
-                <circle cx="12" cy="12" r="3"></circle>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="field">
-          <label for="signup-confirm">Confirm password</label>
-          <div class="password-field">
-            <input type="password" id="signup-confirm" name="confirm" autocomplete="new-password" required>
-            <button type="button" class="password-toggle" data-target="signup-confirm" aria-label="Show password" aria-pressed="false">
-              <svg class="password-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path>
-                <circle cx="12" cy="12" r="3"></circle>
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <span class="field-error" id="signup-error" role="alert"></span>
-
-        <div class="modal-actions">
-          <button type="button" class="btn btn--ghost" id="signup-cancel">Cancel</button>
-          <button type="submit" class="btn btn--primary">Sign up</button>
-        </div>
-      </form>
-
-      <button type="button" class="modal-alt-action" id="signin-mode-toggle">
-        New here? <span class="modal-alt-action__emph">Create an account</span>
-      </button>
-    </div>
-  </div>
-</div>
-
 <div class="toast" id="toast" role="status" hidden></div>
 
 <script src="js/data.js"></script>
 <script src="js/theme.js"></script>
-<script src="js/auth.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
