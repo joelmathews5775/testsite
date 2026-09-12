@@ -20,6 +20,12 @@
   // clears when the tab/browser session ends. The "Download saved
   // briefs" button is the way to keep them past that.
   const SAVED_STORAGE_KEY = 'draftedux_saved_briefs';
+  // Ticket IDs already generated this session, so "Generate a brief" /
+  // "Pull another" work like a shuffle bag: every brief matching the
+  // current filter shows once before any of them repeat. Once every
+  // matching (and unsaved) brief has been seen, that filter's seen
+  // list resets and the cycle starts again.
+  const SEEN_STORAGE_KEY = 'draftedux_seen_briefs';
 
   let currentBrief = null;
   let currentDateStr = null;
@@ -98,6 +104,29 @@
   // ---------------------------------------------------------
   // Brief selection
   // ---------------------------------------------------------
+  function getSeenIds() {
+    try {
+      const raw = sessionStorage.getItem(SEEN_STORAGE_KEY);
+      return raw ? new Set(JSON.parse(raw)) : new Set();
+    } catch (err) {
+      return new Set();
+    }
+  }
+
+  function setSeenIds(idSet) {
+    try {
+      sessionStorage.setItem(SEEN_STORAGE_KEY, JSON.stringify(Array.from(idSet)));
+    } catch (err) {
+      /* ignore */
+    }
+  }
+
+  function markSeen(ticketId) {
+    const seen = getSeenIds();
+    seen.add(ticketId);
+    setSeenIds(seen);
+  }
+
   function getFilteredPool() {
     const skill = skillSelect.value;
     const platform = platformSelect.value;
@@ -231,10 +260,9 @@
 
   function generate() {
     const pool = getFilteredPool();
-    const brief = pickBrief(pool);
     persistFilters();
 
-    if (!brief) {
+    if (pool.length === 0) {
       currentBrief = null;
       currentDateStr = null;
       const anyMatchAtAll = getFilteredPoolIncludingSaved().length > 0;
@@ -246,9 +274,26 @@
       return;
     }
 
+    const seen = getSeenIds();
+    let unseen = pool.filter(function (b) { return !seen.has(b.ticketId); });
+
+    if (unseen.length === 0) {
+      // Every brief matching this filter has already been shown this
+      // session — reset just this filter's slice of the seen list
+      // (not the whole session) so its cycle can start over, without
+      // touching progress on other filter combinations.
+      pool.forEach(function (b) { seen.delete(b.ticketId); });
+      setSeenIds(seen);
+      unseen = pool;
+    }
+
+    const brief = pickBrief(unseen);
+    if (!brief) return; // unreachable — unseen is never empty here, but stay defensive
+
     lastTicketId = brief.ticketId;
     currentBrief = brief;
     currentDateStr = todayLabel();
+    markSeen(brief.ticketId);
     renderTicket(brief, currentDateStr);
 
     try {
@@ -327,7 +372,7 @@
     saveBrief(brief, dateStr);
     renderTicket(brief, dateStr);
     renderSavedSection();
-    showToast('Saved \u201c' + brief.title + '\u201d to your list.');
+    showToast('Saved to your list.');
   }
 
   function formatBriefAsText(brief, dateStr) {
@@ -434,7 +479,7 @@
           '</div>' +
           '<div class="saved-item__actions">' +
             '<button type="button" class="btn btn--ghost btn--small" data-view="' + escapeHtml(item.ticketId) + '">View</button>' +
-            '<button type="button" class="btn btn--ghost btn--small" data-remove="' + escapeHtml(item.ticketId) + '">Remove</button>' +
+            '<button type="button" class="btn btn--ghost btn--small btn--danger" data-remove="' + escapeHtml(item.ticketId) + '">Remove</button>' +
           '</div>' +
         '</div>';
       }).join('') +
@@ -472,6 +517,9 @@
     restoreFilters();
     renderSavedSection();
     restoreCurrentTicket();
+
+    const copyrightYearEl = document.getElementById('copyright-year');
+    if (copyrightYearEl) copyrightYearEl.textContent = new Date().getFullYear();
 
     generatorForm.addEventListener('submit', function (e) {
       e.preventDefault();
