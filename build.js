@@ -4,17 +4,24 @@
  *
  * This site is plain static HTML/CSS/JS with no framework. This script
  * is the one build step: it copies everything into /dist and, while
- * copying HTML files, swaps two placeholder tokens for real values
+ * copying HTML/XML/TXT files, swaps placeholder tokens for real values
  * pulled from environment variables (set in the Vercel dashboard, not
  * committed to git):
  *
+ *   {{SITE_URL}}       -> process.env.SITE_URL       (no trailing slash)
  *   {{PATREON_URL}}    -> process.env.PATREON_URL
  *   {{CONTACT_EMAIL}}  -> process.env.CONTACT_EMAIL   (HTML-entity encoded)
  *
- * Because this runs at BUILD time, Vercel serves normal, real <a> tags
- * to every visitor and crawler — nothing about SEO, social previews,
- * or link functionality changes. Only the source in git stays free of
- * the real address and URL.
+ * SITE_URL exists so the deployed domain (currently a Vercel-assigned
+ * URL, expected to change to a custom domain later) lives in ONE place.
+ * When it changes, update the SITE_URL env var in Vercel and redeploy —
+ * canonical links, Open Graph/Twitter URLs, robots.txt, and sitemap.xml
+ * all pick it up automatically instead of needing a multi-file edit.
+ *
+ * Because this runs at BUILD time, Vercel serves normal, real tags and
+ * links to every visitor and crawler — nothing about SEO, social
+ * previews, or link functionality changes. Only the source in git stays
+ * free of the real address, URL, and domain.
  *
  * Local development: copy .env.example to .env.local, fill in real
  * values, then run `vercel dev` (Vercel automatically loads
@@ -44,12 +51,21 @@ const ENTRIES = [
   'sitemap.xml'
 ];
 
-const HTML_EXTENSIONS = new Set(['.html']);
+// File types that may contain {{...}} tokens and get text substitution.
+// Everything else (images, css, js) is copied byte-for-byte.
+const TEXT_EXTENSIONS = new Set(['.html', '.xml', '.txt']);
 
 function getConfig() {
+  const siteUrl = process.env.SITE_URL;
   const patreonUrl = process.env.PATREON_URL;
   const contactEmail = process.env.CONTACT_EMAIL;
 
+  if (!siteUrl) {
+    console.warn(
+      '[build] SITE_URL is not set — falling back to a placeholder. ' +
+      'Set it in Vercel > Project > Settings > Environment Variables.'
+    );
+  }
   if (!patreonUrl) {
     console.warn(
       '[build] PATREON_URL is not set — falling back to a placeholder. ' +
@@ -64,6 +80,8 @@ function getConfig() {
   }
 
   return {
+    // No trailing slash — templates add "/" themselves where needed.
+    siteUrl: (siteUrl || 'https://example.vercel.app').replace(/\/+$/, ''),
     patreonUrl: patreonUrl || 'https://www.patreon.com/YOUR_PAGE',
     contactEmail: contactEmail || 'hello@example.com'
   };
@@ -84,10 +102,33 @@ function obfuscateEmail(email) {
     .join('');
 }
 
-function injectConfig(html, config) {
-  return html
+function injectConfig(text, config) {
+  return text
+    .split('{{SITE_URL}}').join(config.siteUrl)
     .split('{{PATREON_URL}}').join(config.patreonUrl)
     .split('{{CONTACT_EMAIL}}').join(obfuscateEmail(config.contactEmail));
+}
+
+// data.js is a large (~1.8MB) pretty-printed JSON array assigned to a
+// single const. Re-serializing it without whitespace meaningfully cuts
+// page weight on the homepage with zero change in behavior. This only
+// fires for that one recognizable shape; anything that doesn't match
+// is left completely untouched rather than risking corruption.
+const DATA_JS_PATTERN = /^const PROJECT_BRIEFS = (\[[\s\S]*\]);\s*$/;
+
+function minifyDataJs(source) {
+  const match = source.match(DATA_JS_PATTERN);
+  if (!match) {
+    console.warn('[build] js/data.js did not match the expected shape — copying unminified.');
+    return source;
+  }
+  try {
+    const data = JSON.parse(match[1]);
+    return 'const PROJECT_BRIEFS = ' + JSON.stringify(data) + ';\n';
+  } catch (err) {
+    console.warn('[build] Could not parse js/data.js as JSON — copying unminified. ' + err.message);
+    return source;
+  }
 }
 
 function copyRecursive(srcPath, destPath, config) {
@@ -104,9 +145,13 @@ function copyRecursive(srcPath, destPath, config) {
   fs.mkdirSync(path.dirname(destPath), { recursive: true });
 
   const ext = path.extname(srcPath).toLowerCase();
-  if (HTML_EXTENSIONS.has(ext)) {
-    const html = fs.readFileSync(srcPath, 'utf8');
-    fs.writeFileSync(destPath, injectConfig(html, config), 'utf8');
+  const base = path.basename(srcPath);
+
+  if (TEXT_EXTENSIONS.has(ext)) {
+    const text = fs.readFileSync(srcPath, 'utf8');
+    fs.writeFileSync(destPath, injectConfig(text, config), 'utf8');
+  } else if (base === 'data.js') {
+    fs.writeFileSync(destPath, minifyDataJs(fs.readFileSync(srcPath, 'utf8')), 'utf8');
   } else {
     fs.copyFileSync(srcPath, destPath);
   }

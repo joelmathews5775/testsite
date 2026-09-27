@@ -5,15 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DRAFTED UX — Real project briefs for UI/UX designers</title>
 <meta name="description" content="Pull a real-world UI/UX design brief matched to your skill level and platform, then design it for your portfolio.">
+<meta name="author" content="Joel Mathews">
+<meta name="keywords" content="UI/UX design brief generator, UX design practice, UI design practice, portfolio project ideas, design challenges for designers, UX case study ideas, mobile app design brief, web app design brief, design exercise generator, practice UX projects, UI UX portfolio builder">
 
-<!-- Canonical + social preview tags. Replace the placeholder domain
-     (draftedux.example) with the site's real deployed URL. -->
-<link rel="canonical" href="https://drafted-ux.vercel.app/">
+<!-- Canonical + social preview tags. SITE_URL is injected at build
+     time from an env var (see build.js) so the domain lives in one
+     place and survives a future domain change without editing HTML. -->
+<link rel="canonical" href="{{SITE_URL}}/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DRAFTED UX">
 <meta property="og:title" content="DRAFTED UX — Real project briefs for UI/UX designers">
 <meta property="og:description" content="Pull a real-world UI/UX design brief matched to your skill level and platform, then design it for your portfolio.">
-<meta property="og:url" content="https://drafted-ux.vercel.app/">
+<meta property="og:url" content="{{SITE_URL}}/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DRAFTED UX — Real project briefs for UI/UX designers">
 <meta name="twitter:description" content="Pull a real-world UI/UX design brief matched to your skill level and platform, then design it for your portfolio.">
