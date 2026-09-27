@@ -8,12 +8,12 @@
 
 <!-- Canonical + social preview tags. Replace the placeholder domain
      (draftedux.example) with the site's real deployed URL. -->
-<link rel="canonical" href="https://draftedux.example/">
+<link rel="canonical" href="https://drafted-ux.vercel.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DRAFTED UX">
 <meta property="og:title" content="DRAFTED UX — Real project briefs for UI/UX designers">
 <meta property="og:description" content="Pull a real-world UI/UX design brief matched to your skill level and platform, then design it for your portfolio.">
-<meta property="og:url" content="https://draftedux.example/">
+<meta property="og:url" content="https://drafted-ux.vercel.app/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DRAFTED UX — Real project briefs for UI/UX designers">
 <meta name="twitter:description" content="Pull a real-world UI/UX design brief matched to your skill level and platform, then design it for your portfolio.">
@@ -63,7 +63,7 @@
 
       <a id="support-btn"
          class="btn btn--ghost btn--small"
-         href="https://www.patreon.com/YOUR_PAGE"
+         href="{{PATREON_URL}}"
          target="_blank"
          rel="noopener noreferrer"
          aria-label="Support this project on Patreon (opens in a new tab)">
@@ -170,8 +170,8 @@
           <p>Overview, the problem to solve, target users, key screens, constraints, and deliverables — everything a real client hand-off would include.</p>
         </li>
         <li>
-          <h3>Save it, then ship it</h3>
-          <p>Save a brief to keep it on your list for this session, design the flow, and download your saved briefs any time to keep them for good.</p>
+          <h3>Save it, design it, then ship it</h3>
+          <p>Save a brief to keep it on your list for this session, or download your saved briefs to keep them for good and design the flow.</p>
         </li>
       </ol>
     </div>
@@ -183,7 +183,7 @@
   <div class="wrap">
     <p>&copy; <span id="copyright-year"></span> DRAFTED UX — practice briefs for UI/UX designers.</p>
     <p><a href="supporters.html">Meet our monthly supporters</a></p>
-    <p><a href="mailto:hello@draftedux.example?subject=Bug%20report%20or%20issue">Report an issue</a></p>
+    <p><a href="mailto:{{CONTACT_EMAIL}}?subject=Bug%20report%20or%20issue">Report an issue</a></p>
   </div>
 </footer>
 

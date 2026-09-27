@@ -48,7 +48,7 @@
 
       <a id="support-btn"
          class="btn btn--ghost btn--small"
-         href="https://www.patreon.com/YOUR_PAGE"
+         href="{{PATREON_URL}}"
          target="_blank"
          rel="noopener noreferrer"
          aria-label="Support this project on Patreon (opens in a new tab)">
@@ -75,8 +75,8 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <h2 id="tier-heading-0">Domain &amp; Infrastructure Supporter</h2>
-          <p>Helps cover the domain, hosting, and the other invisible costs that keep the site online.</p>
+          <h2 id="tier-heading-0">Infrastructure Backer</h2>
+          <p>Keeps the domain renewed and hosting secure as the site grows beyond free-tier limits.</p>
         </div>
       </div>
       <div class="supporter-list" id="tier-list-0" aria-live="polite">
@@ -89,8 +89,8 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <h2 id="tier-heading-1">Local Hardware &amp; AI Rig Engine</h2>
-          <p>Helps fund the local hardware behind building and testing this project.</p>
+          <h2 id="tier-heading-1">Visionary Partner</h2>
+          <p>Funds the AI hardware needed to run open-source models locally and automate the platform.</p>
         </div>
       </div>
       <div class="supporter-list" id="tier-list-1" aria-live="polite">
@@ -103,8 +103,8 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <h2 id="tier-heading-2">Visionary Partner</h2>
-          <p>Our most generous monthly tier — a real vote of confidence in where this project is headed.</p>
+          <h2 id="tier-heading-2">Buy the Dev a Coffee</h2>
+          <p>Fuels the day-to-day building, feature work, and bug fixes that keep the platform improving.</p>
         </div>
       </div>
       <div class="supporter-list" id="tier-list-2" aria-live="polite">
@@ -120,7 +120,7 @@
       <h2 id="join-heading">Want to see your name up here?</h2>
       <p style="color: var(--ink-soft); max-width: 62ch; margin-top: var(--space-2);">
         Every tier keeps DRAFTED UX running for everyone who uses it for free.
-        <a id="join-patreon-link" href="https://www.patreon.com/YOUR_PAGE" target="_blank" rel="noopener noreferrer">Join on Patreon</a> to grab a spot in the next update.
+        <a id="join-patreon-link" href="{{PATREON_URL}}" target="_blank" rel="noopener noreferrer">Join on Patreon</a> to grab a spot in the next update.
       </p>
       <p id="last-updated" style="color: var(--ink-faint); font-size: 0.85rem; margin-top: var(--space-4);"></p>
     </div>
@@ -132,7 +132,7 @@
   <div class="wrap">
     <p>&copy; <span id="copyright-year"></span> DRAFTED UX — practice briefs for UI/UX designers.</p>
     <p><a href="supporters.html">Meet our monthly supporters</a></p>
-    <p><a href="mailto:hello@draftedux.example?subject=Bug%20report%20or%20issue">Report an issue</a></p>
+    <p><a href="mailto:{{CONTACT_EMAIL}}?subject=Bug%20report%20or%20issue">Report an issue</a></p>
   </div>
 </footer>
 
